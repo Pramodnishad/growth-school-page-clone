@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import frame from './assets/images/frame.png'
+import Frame from './components/Frame'
+import Answer from './components/Answer'
+import Register from './components/Register'
+import Mentor from './components/Mentor'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div className="md:w-full w-auto">
+    <div className="md:w-auto w-auto "
+       style={{
+         backgroundImage: `url(${frame})`,
+         backgroundRepeat: 'no-repeat',
+         backgroundSize: 'cover',
+         backgroundAttachment: 'fixed',
+       }}
+     >
+       <Frame />
+     </div> 
+     <Answer />
+  
+     <Register />
+    
+     <Mentor />
+  
+
+     </div>  
+  )
 }
 
-export default App;
+export default App
